@@ -10,6 +10,10 @@ let package = Package(
         .library(
             name: "slf",
             targets: ["slf"]
+        ),
+        .library(
+            name: "SimpleLogger",
+            targets: ["SimpleLogger"]
         )
     ],
     dependencies: [
@@ -25,6 +29,14 @@ let package = Package(
         .testTarget(
             name: "slfTests",
             dependencies: ["slf", "Nimble"]
+        ),
+        .target(
+            name: "SimpleLogger",
+            dependencies: ["slf"]
+        ),
+        .testTarget(
+            name: "SimpleLoggerTests",
+            dependencies: ["SimpleLogger", "Nimble"]
         )
     ]
 )
