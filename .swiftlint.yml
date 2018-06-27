@@ -1,0 +1,40 @@
+included:
+  - Sources
+  - Tests
+excluded:
+  - Pods
+
+opt_in_rules:
+  - array_init
+  - required_enum_case
+  - yoda_condition
+  - unneeded_parentheses_in_closure_argument
+  - trailing_closure
+  - switch_case_on_newline
+  - sorted_imports
+  - sorted_first_last
+  - redundant_nil_coalescing
+  - prohibited_super_call
+  - override_in_extension
+  - overridden_super_call
+  - operator_usage_whitespace
+  - contains_over_first_not_nil
+  - conditional_returns_on_newline
+  - explicit_init
+  - extension_access_modifier
+  - closure_end_indentation
+  - closure_spacing
+  - untyped_error_in_catch
+  - nimble_operator
+  - let_var_whitespace
+  - discouraged_optional_collection
+  - literal_expression_end_indentation
+  - empty_count
+
+line_length:
+  warning: 160
+  error: 180
+
+function_parameter_count:
+  warning: 6
+  error: 8
