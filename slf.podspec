@@ -14,4 +14,9 @@ Pod::Spec.new do |s|
   s.source_files = 'Sources/slf/**/*.swift'
 
   s.requires_arc = true
+
+  s.subspec 'SimpleLogger' do |sp|
+    sp.source_files = 'Sources/SimpleLogger/**/*.swift'
+  end
+
 end
