@@ -1,7 +1,7 @@
 pipeline {
     agent none
     stages {
-        stage {
+        stage('Build') {
             parallel {
 
                 stage('Linux - Swift 4.2.4') {
