@@ -88,7 +88,7 @@ public extension Logger {
 
     private func threadName() -> String {
 #if os(Linux)
-        return nil
+        return "not-implemented"
 #else
         if Thread.isMainThread {
             return "main"
@@ -105,7 +105,7 @@ public extension Logger {
 
     private func currentQueueLabel() -> String? {
 #if os(Linux)
-        return "not-implemented"
+        return nil
 #else
         guard Thread.isMainThread == false else {
             return nil
