@@ -104,10 +104,14 @@ public extension Logger {
     }
 
     private func currentQueueLabel() -> String? {
+#if os(Linux)
+        return nil
+#else
         guard Thread.isMainThread == false else {
             return nil
         }
         return String(validatingUTF8: __dispatch_queue_get_label(nil))
+#endif
     }
 
     private func processId() -> String {
