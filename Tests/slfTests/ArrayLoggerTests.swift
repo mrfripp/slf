@@ -34,7 +34,7 @@ class ArrayLoggerTests: XCTestCase {
 
 #if os(Linux)
 extension NoOpLoggerTests {
-    static var allTests: [(String, NoOpLoggerTests -> () throws -> Void)] {
+    static var allTests: [(String, (NoOpLoggerTests) -> () throws -> Void)] {
         return []
     }
 }

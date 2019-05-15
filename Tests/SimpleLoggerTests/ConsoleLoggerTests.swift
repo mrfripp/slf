@@ -18,7 +18,7 @@ class SimpleLoggerTests: XCTestCase {
 
 #if os(Linux)
 extension SimpleLoggerTests {
-    static var allTests: [(String, SimpleLoggerTests -> () throws -> Void)] {
+    static var allTests: [(String, (SimpleLoggerTests) -> () throws -> Void)] {
         return [
             ("testString", testString)
         ]

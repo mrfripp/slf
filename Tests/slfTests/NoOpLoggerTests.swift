@@ -110,7 +110,7 @@ enum TestingProductSize {
 
 #if os(Linux)
 extension NoOpLoggerTests {
-    static var allTests: [(String, NoOpLoggerTests -> () throws -> Void)] {
+    static var allTests: [(String, (NoOpLoggerTests) -> () throws -> Void)] {
         return [
             ("testLogTrace", testLogTrace),
             ("testLogDebug", testLogDebug),

@@ -80,7 +80,7 @@ class FileLocationTests: XCTestCase {
 
 #if os(Linux)
 extension FileLocationTests {
-    static var allTests: [(String, FileLocationTests -> () throws -> Void)] {
+    static var allTests: [(String, (FileLocationTests) -> () throws -> Void)] {
         return [
 
         ]
