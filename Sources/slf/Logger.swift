@@ -88,7 +88,7 @@ public extension Logger {
 
     private func threadName() -> String {
 #if os(Linux)
-        return "not-implemented"
+        return nil
 #else
         if Thread.isMainThread {
             return "main"
