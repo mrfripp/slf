@@ -85,7 +85,7 @@ pipeline {
                         }
                         stage('SwiftEnv') {
                             steps {
-                                sh 'swiftenv global 4.0.3'
+                                sh 'swiftenv local 4.0.3'
                             }
                         }
                         stage('Build') {
@@ -113,7 +113,7 @@ pipeline {
                         }
                         stage('SwiftEnv') {
                             steps {
-                                sh 'swiftenv global 4.2.4'
+                                sh 'swiftenv local 4.2.4'
                             }
                         }
                         stage('Build') {
@@ -141,7 +141,7 @@ pipeline {
                         }
                         stage('SwiftEnv') {
                             steps {
-                                sh 'swiftenv global 5.0.1'
+                                sh 'swiftenv local 5.0.1'
                             }
                         }
                         stage('Build') {
