@@ -13,10 +13,10 @@ public class LoggerFactory {
     }
 
     public class func getLogger(_ clazz: AnyObject) -> Logger {
-        return getLogger(String(describing: clazz))
+        return getLogger(name: String(describing: clazz))
     }
 
-    public class func getLogger(_ name: String) -> Logger {
+    public class func getLogger(name: String) -> Logger {
         return getServiceProvider().getLogger(name: name)
     }
 
