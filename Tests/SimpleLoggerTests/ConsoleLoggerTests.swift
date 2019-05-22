@@ -15,13 +15,3 @@ class SimpleLoggerTests: XCTestCase {
         expect(logger.name) == "test-logger"
     }
 }
-
-#if os(Linux)
-extension SimpleLoggerTests {
-    static var allTests: [(String, SimpleLoggerTests -> () throws -> Void)] {
-        return [
-            ("testString", testString)
-        ]
-    }
-}
-#endif

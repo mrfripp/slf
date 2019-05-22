@@ -31,11 +31,3 @@ class ArrayLoggerTests: XCTestCase {
         logger.log(.trace, "Trace logging.")
     }
 }
-
-#if os(Linux)
-extension NoOpLoggerTests {
-    static var allTests: [(String, NoOpLoggerTests -> () throws -> Void)] {
-        return []
-    }
-}
-#endif
