@@ -12,11 +12,11 @@ public class LoggerFactory {
         self.provider = provider
     }
 
-    public class func getLogger(_ clazz: AnyObject) -> Logger {
-        return getLogger(String(describing: clazz))
+    public class func getLogger(_ object: Any) -> Logger {
+        return getLogger(name: String(describing: object))
     }
 
-    public class func getLogger(_ name: String) -> Logger {
+    public class func getLogger(name: String) -> Logger {
         return getServiceProvider().getLogger(name: name)
     }
 

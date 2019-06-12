@@ -77,13 +77,3 @@ class FileLocationTests: XCTestCase {
         expect(event.message) == "Trace logging."
     }
 }
-
-#if os(Linux)
-extension FileLocationTests {
-    static var allTests: [(String, FileLocationTests -> () throws -> Void)] {
-        return [
-
-        ]
-    }
-}
-#endif

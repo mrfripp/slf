@@ -107,17 +107,3 @@ enum TestingProductSize {
     case medium
     case large
 }
-
-#if os(Linux)
-extension NoOpLoggerTests {
-    static var allTests: [(String, NoOpLoggerTests -> () throws -> Void)] {
-        return [
-            ("testLogTrace", testLogTrace),
-            ("testLogDebug", testLogDebug),
-            ("testLogInfo", testLogInfo),
-            ("testLogWarn", testLogWarn),
-            ("testLogError", testLogError)
-        ]
-    }
-}
-#endif
