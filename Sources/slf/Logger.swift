@@ -63,27 +63,27 @@ public extension Logger {
 
     func trace(_ msg: @autoclosure () -> CustomStringConvertible, _ error: Error? = nil,
                functionName: String = #function, lineNum: Int = #line, fileName: String = #file) {
-        log(.trace, msg, error, functionName: functionName, lineNum: lineNum, fileName: fileName)
+        log(.trace, msg(), error, functionName: functionName, lineNum: lineNum, fileName: fileName)
     }
 
     func debug(_ msg: @autoclosure () -> CustomStringConvertible, _ error: Error? = nil,
                functionName: String = #function, lineNum: Int = #line, fileName: String = #file) {
-        log(.debug, msg, error, functionName: functionName, lineNum: lineNum, fileName: fileName)
+        log(.debug, msg(), error, functionName: functionName, lineNum: lineNum, fileName: fileName)
     }
 
     func info(_ msg: @autoclosure () -> CustomStringConvertible, _ error: Error? = nil,
               functionName: String = #function, lineNum: Int = #line, fileName: String = #file) {
-        log(.info, msg, error, functionName: functionName, lineNum: lineNum, fileName: fileName)
+        log(.info, msg(), error, functionName: functionName, lineNum: lineNum, fileName: fileName)
     }
 
     func warn(_ msg: @autoclosure () -> CustomStringConvertible, _ error: Error? = nil,
               functionName: String = #function, lineNum: Int = #line, fileName: String = #file) {
-        log(.warn, msg, error, functionName: functionName, lineNum: lineNum, fileName: fileName)
+        log(.warn, msg(), error, functionName: functionName, lineNum: lineNum, fileName: fileName)
     }
 
     func error(_ msg: @autoclosure () -> CustomStringConvertible, _ error: Error? = nil,
                functionName: String = #function, lineNum: Int = #line, fileName: String = #file) {
-        log(.error, msg, error, functionName: functionName, lineNum: lineNum, fileName: fileName)
+        log(.error, msg(), error, functionName: functionName, lineNum: lineNum, fileName: fileName)
     }
 
     private func threadName() -> String {
