@@ -29,7 +29,7 @@ pipeline {
 
                 stage('Linux - Swift 5.1') {
                     agent {
-                        docker { image 'swift:4.1' }
+                        docker { image 'swift:5.1' }
                     }
                     stages {
                         stage('SCM') {
