@@ -4,9 +4,9 @@ pipeline {
         stage('Build') {
             parallel {
 
-                stage('Linux - Swift 4.0.3') {
+                stage('Linux - Swift 4.2') {
                     agent {
-                        docker { image 'swift:4.0.3' }
+                        docker { image 'swift:4.2' }
                     }
                     stages {
                         stage('SCM') {
@@ -27,9 +27,9 @@ pipeline {
                     }
                 }
 
-                stage('Linux - Swift 4.2.4') {
+                stage('Linux - Swift 5.1') {
                     agent {
-                        docker { image 'swift:4.2.4' }
+                        docker { image 'swift:4.1' }
                     }
                     stages {
                         stage('SCM') {
@@ -50,42 +50,14 @@ pipeline {
                     }
                 }
 
-                stage('Linux - Swift 5.0.1') {
+                stage('Linux - Swift 5.3') {
                     agent {
-                        docker { image 'swift:5.0.1' }
+                        docker { image 'swift:5.3' }
                     }
                     stages {
                         stage('SCM') {
                             steps {
                                 checkout scm
-                            }
-                        }
-                        stage('Build') {
-                            steps {
-                                sh 'swift build'
-                            }
-                        }
-                        stage('Test') {
-                            steps {
-                                sh 'swift test'
-                            }
-                        }
-                    }
-                }
-
-                stage('MacOS - Swift 4.0.3') {
-                    agent {
-                        label 'MacOS'
-                    }
-                    stages {
-                        stage('SCM') {
-                            steps {
-                                checkout scm
-                            }
-                        }
-                        stage('SwiftEnv') {
-                            steps {
-                                sh 'swiftenv local 4.0.3'
                             }
                         }
                         stage('Build') {
@@ -129,7 +101,7 @@ pipeline {
                     }
                 }
 
-                stage('MacOS - Swift 5.0.1') {
+                stage('MacOS - Swift 5.1.4') {
                     agent {
                         label 'MacOS'
                     }
@@ -141,7 +113,35 @@ pipeline {
                         }
                         stage('SwiftEnv') {
                             steps {
-                                sh 'swiftenv local 5.0.1'
+                                sh 'swiftenv local 5.1.4'
+                            }
+                        }
+                        stage('Build') {
+                            steps {
+                                sh 'swift build'
+                            }
+                        }
+                        stage('Test') {
+                            steps {
+                                sh 'swift test'
+                            }
+                        }
+                    }
+                }
+
+                stage('MacOS - Swift 5.3.1') {
+                    agent {
+                        label 'MacOS'
+                    }
+                    stages {
+                        stage('SCM') {
+                            steps {
+                                checkout scm
+                            }
+                        }
+                        stage('SwiftEnv') {
+                            steps {
+                                sh 'swiftenv local 5.3.1'
                             }
                         }
                         stage('Build') {
