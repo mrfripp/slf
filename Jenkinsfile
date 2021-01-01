@@ -129,7 +129,7 @@ pipeline {
                     }
                 }
 
-                stage('MacOS - Swift 5.3.1') {
+                stage('MacOS - Swift 5.3.2') {
                     agent {
                         label 'MacOS'
                     }
@@ -141,7 +141,7 @@ pipeline {
                         }
                         stage('SwiftEnv') {
                             steps {
-                                sh 'swiftenv local 5.3.1'
+                                sh 'swiftenv local 5.3.2'
                             }
                         }
                         stage('Build') {
