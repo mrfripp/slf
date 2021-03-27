@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name = 'slf'
-  s.version = '0.1.1'
+  s.version = '0.2.0'
   s.license = 'MIT'
   s.summary = 'Swift Logging Facade'
   s.homepage = 'https://github.com/mrfripp/slf'
   s.authors = { 'Fredrik Pettersson' => 'fredrik.lars.pettersson@gmail.com' }
-  s.source = { :git => 'https://github.com/mrfripp/slf.git', :tag => '0.1.1' }
+  s.source = { :git => 'https://github.com/mrfripp/slf.git', :tag => '0.2.0' }
 
   s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.11'
